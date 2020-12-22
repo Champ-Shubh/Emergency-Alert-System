@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "822400987722",
+    "firebase_url": "https://alert-system-project.firebaseio.com",
+    "project_id": "alert-system-project",
+    "storage_bucket": "alert-system-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822400987722:android:2a4d559960108d4e57ecb3",
+        "android_client_info": {
+          "package_name": "com.undispuated.alertsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822400987722-1f1vbnacq87r0jdn44dr06u5qcnrv7j1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.undispuated.alertsystem",
+            "certificate_hash": "50ebbece8f4ef5a390a0e3b7e29bc83c81f7c407"
+          }
+        },
+        {
+          "client_id": "822400987722-fcieupfsa283447ldphnu3f9rbsll8km.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuhNjTAhCwakOHHnBCWCvVFN83n6mXFww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822400987722-fcieupfsa283447ldphnu3f9rbsll8km.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

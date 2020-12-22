@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">AlertSystem</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="app_logo">App Logo</string>
+    <string name="my_app_name">Alert Buddy</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="home">Home</string>
+    <string name="myProfile">Profile</string>
+    <string name="faq">FAQs</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emergency_assistance">Emergency Assistance</string>
+    <string name="greeting_text">Hello %s,\nWe\'re here for you :)</string>
+    <string name="one_click_emergency_assist">One Click Emergency Assist</string>
+    <string name="motor_accident">Motor Accident</string>
+    <string name="medical_emergency">Medical Emergency</string>
+    <string name="theft_harassment">Theft/ Harassment</string>
+    <string name="terrorism">Terrorism</string>
+    <string name="you_ve_requested_for">You\'ve requested for</string>
+    <string name="hold_on_for_help">Hold tight, dispatch is on your way</string>
+    <string name="detected_location">Detected Location</string>
+    <string name="hint_current_location">Current location</string>
+    <string name="profile_age">%d years</string>
+    <string name="profile_username">Username :</string>
+    <string name="profile_contact_no">Contact No. :</string>
+    <string name="btn_add_contact">Add Contact Number</string>
+    <string name="prof_txt_mobile">+91-%d</string>
+    <string name="profile_address">Default Address :</string>
+    <string name="prof_txt_address">Manasnagar, Mughalsarai</string>
+    <string name="btn_add_address">Add Default Address</string>
+    <string name="prof_header_age">Age :</string>
+    <string name="btn_enter_age">Enter Age</string>
+    <string name="profile_gender">Gender :</string>
+    <string name="prof_txt_gender">Male</string>
+    <string name="btn_enter_gender">Enter Gender</string>
+    <string name="btn_save">Save</string>
+    <string name="alert_system_sharedPref">AlertSystem SharedPreference</string>
+    <string name="btn_cancel_alert">Cancel Alert</string>
+    <string name="btn_out_of_emergency">Out of Emergency</string>
+    <string name="txt_current_location">%s, %s, %s</string>
+    <string name="my_profile_section">My Profile Section</string>
+    <string name="edit_profile_name">Profile Name</string>
+    <string name="edit_mobile">Mobile Number</string>
+    <string name="edit_age">Age</string>
+    <string name="edit_gender">Gender</string>
+</resources>

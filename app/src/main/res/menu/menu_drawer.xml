@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home"
+            android:title="@string/home"
+            android:icon="@drawable/action_home"/>
+
+        <item
+            android:id="@+id/menu_profile"
+            android:title="@string/myProfile"
+            android:icon="@drawable/ic_profile"/>
+
+        <item
+            android:id="@+id/menu_faq"
+            android:title="@string/faq"
+            android:icon="@drawable/action_faq"/>
+
+        <item
+            android:id="@+id/menu_change_password"
+            android:title="@string/change_password"
+            android:icon="@drawable/action_password"/>
+
+        <item
+            android:id="@+id/menu_logout"
+            android:title="@string/logout"
+            android:icon="@drawable/action_logout"/>
+
+    </group>
+
+</menu>

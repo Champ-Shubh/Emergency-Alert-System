@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragment.ProfileFragment">
+
+        <ImageView
+            android:id="@+id/imgProfileDecor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_security_shield" />
+
+        <TextView
+            android:id="@+id/txtProfileAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfileDecor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@string/my_app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtProfileDecor"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@id/txtProfileAppName"
+            android:layout_marginTop="18dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/txtProfileUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileDecor"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_profile"
+            android:drawablePadding="4dp"
+            android:padding="2dp"
+            android:text="@string/profile_username"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtUsernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileDecor"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/txtProfileUsername"
+            android:padding="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="Shubham Srivastava" />
+
+        <TextView
+            android:id="@+id/txtProfileMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileUsername"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            android:padding="2dp"
+            android:text="@string/profile_contact_no"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtMobileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtUsernameText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtProfileMobile"
+            android:padding="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="@string/prof_txt_mobile" />
+
+        <TextView
+            android:id="@+id/txtProfileAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileMobile"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="4dp"
+            android:padding="2dp"
+            android:text="@string/profile_address"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMobileText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtProfileAddress"
+            android:padding="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="@string/prof_txt_address" />
+
+        <TextView
+            android:id="@+id/txtProfileAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileAddress"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_age"
+            android:drawablePadding="4dp"
+            android:padding="2dp"
+            android:text="@string/prof_header_age"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAddressText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtProfileAge"
+            android:padding="2dp"
+            android:text="@string/profile_age"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txtProfileGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProfileAge"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_gender"
+            android:drawablePadding="4dp"
+            android:padding="2dp"
+            android:text="@string/profile_gender"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtGenderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAgeText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtProfileGender"
+            android:padding="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="@string/prof_txt_gender" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="40dp"
+            android:layout_below="@id/txtGenderText"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_edit"
+            app:maxImageSize="25dp"
+            android:elevation="4dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="Edit Button" />
+
+    </RelativeLayout>
+</ScrollView>

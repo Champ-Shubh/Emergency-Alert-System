@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/txtGreeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/greeting_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlEmergency"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtGreeting"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp">
+
+        <ImageView
+            android:id="@+id/imgSiren"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_siren" />
+
+        <TextView
+            android:id="@+id/txtEmergencyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imgSiren"
+            android:background="@android:color/white"
+            android:drawableEnd="@drawable/ic_arrow_rt"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/emergency_assistance"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtOneClickAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlEmergency"
+        android:text="@string/one_click_emergency_assist"
+        android:textColor="@color/common_google_signin_btn_text_light"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlAccident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/rounded_corner_tab"
+        android:backgroundTint="#2196F3"
+        android:layout_below="@id/txtOneClickAlert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/imgAccident"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_accident"/>
+
+        <TextView
+            android:id="@+id/txtAccident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgAccident"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/motor_accident"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/ic_arrow_rt_light"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMedical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/rounded_corner_tab"
+        android:backgroundTint="#2196F3"
+        android:layout_below="@id/rlAccident"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/imgMedical"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_medical"/>
+
+        <TextView
+            android:id="@+id/txtMedical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgMedical"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/medical_emergency"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/ic_arrow_rt_light"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTheft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/rounded_corner_tab"
+        android:backgroundTint="#2196F3"
+        android:layout_below="@id/rlMedical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/imgTheft"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_thief"/>
+
+        <TextView
+            android:id="@+id/txtTheft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgTheft"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/theft_harassment"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/ic_arrow_rt_light"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTerrorism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/rounded_corner_tab"
+        android:backgroundTint="#2196F3"
+        android:layout_below="@id/rlTheft"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/imgTerrorism"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_rifle"/>
+
+        <TextView
+            android:id="@+id/txtTerrorism"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgTerrorism"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/terrorism"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/ic_arrow_rt_light"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
