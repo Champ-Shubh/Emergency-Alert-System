@@ -47,4 +47,15 @@
     <string name="edit_mobile">Mobile Number</string>
     <string name="edit_age">Age</string>
     <string name="edit_gender">Gender</string>
+    <string name="title_emergency_contacts">Emergency Contacts</string>
+    <string name="str_nickname">%s</string>
+    <string name="str_name">%s</string>
+    <string name="str_phone_number">+91-%d</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="contact_nickname">Contact\'s Nickname</string>
+    <string name="contact_phone_number">Contact\'s Phone Number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose_gender">Select Gender :</string>
+    <string name="add_contact">Add Contact</string>
 </resources>

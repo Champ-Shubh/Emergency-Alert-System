@@ -1,16 +1,19 @@
 package com.undispuated.alertsystem.fragment
 
-import android.content.Context
-import android.content.SharedPreferences
-
+import android.app.Activity
+import android.app.PendingIntent
+import android.content.*
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.telephony.SmsManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.undispuated.alertsystem.R
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,8 +52,11 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        sharedPreferences = activity!!.getSharedPreferences(getString(R.string.alert_system_sharedPref), Context.MODE_PRIVATE)
-        username = sharedPreferences.getString("username","Mr. Anonymous").toString()
+        sharedPreferences = activity!!.getSharedPreferences(
+            getString(R.string.alert_system_sharedPref),
+            Context.MODE_PRIVATE
+        )
+        username = sharedPreferences.getString("username", "Mr. Anonymous").toString()
 
         rlEmergency = view.findViewById(R.id.rlEmergency)
         rlAccident = view.findViewById(R.id.rlAccident)
@@ -59,13 +65,15 @@ class HomeFragment : Fragment() {
         rlTerrorism = view.findViewById(R.id.rlTerrorism)
         txtGreeting = view.findViewById(R.id.txtGreeting)
 
-        txtGreeting.text = getString(R.string.greeting_text,username)
+        txtGreeting.text = getString(R.string.greeting_text, username)
 
         rlEmergency.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.replace(
                 R.id.frameLayout,
                 EmergencyFragment()
             )?.commit()
+
+            sendSMS("")
         }
 
         rlMedical.setOnClickListener {
@@ -73,9 +81,71 @@ class HomeFragment : Fragment() {
                 R.id.frameLayout,
                 MedicalFragment()
             )?.commit()
+
+            sendSMS("Medical")
+
+            // TODO: Add Pending Intents and Broadcast Receivers to monitor the SMS sending process and add actual phone numbers
         }
 
         return view
+    }
+
+    private fun sendSMS(emergencyType: String) {
+        val message = " \bURGENT\b Hey buddy !! One of your friend $username is in $emergencyType Emergency. He/She needs your help urgently."
+
+        //TODO: Add Pending Intents and Broadcast Receivers to monitor the SMS sending process
+
+        val SENT = "SMS_SENT"
+        val DELIVERED = "SMS_DELIVERED"
+
+        val sentPI = PendingIntent.getBroadcast(
+            activity, 0,
+            Intent(SENT), 0
+        )
+
+        val deliveredPI = PendingIntent.getBroadcast(
+            activity, 0,
+            Intent(DELIVERED), 0
+        )
+
+        // Broadcast Receiver for SMS sent
+        activity?.registerReceiver(object : BroadcastReceiver() {
+            override fun onReceive(arg0: Context, arg1: Intent) {
+                when (resultCode) {
+                    Activity.RESULT_OK -> Toast.makeText(
+                        activity, "SMS sent",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    SmsManager.RESULT_ERROR_GENERIC_FAILURE -> Toast.makeText(
+                        activity, "Generic failure",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    SmsManager.RESULT_ERROR_NO_SERVICE -> Toast.makeText(
+                        activity, "No service",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }, IntentFilter(SENT))
+
+        // Broadcast Receiver for SMS delivered
+        activity?.registerReceiver(object : BroadcastReceiver(){
+            override fun onReceive(p0: Context?, p1: Intent?) {
+                when (resultCode) {
+                    Activity.RESULT_OK -> Toast.makeText(
+                        activity, "SMS delivered",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    Activity.RESULT_CANCELED -> Toast.makeText(
+                        activity, "SMS delivery cancelled",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }, IntentFilter(DELIVERED))
+
+        val sms = SmsManager.getDefault()
+        sms.sendTextMessage("+918601648405", null, message, sentPI, deliveredPI)
     }
 
     companion object {

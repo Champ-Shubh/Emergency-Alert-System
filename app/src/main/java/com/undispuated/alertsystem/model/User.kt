@@ -1,4 +1,4 @@
-package com.undispuated.alertsystem.util
+package com.undispuated.alertsystem.model
 
 data class User(
     val username: String,

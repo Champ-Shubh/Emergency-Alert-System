@@ -6,20 +6,21 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Geocoder
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.undispuated.alertsystem.R
-import com.undispuated.alertsystem.util.User
+import com.undispuated.alertsystem.model.User
 import java.util.*
 
 class EditProfileFragment : Fragment() {
@@ -46,7 +47,10 @@ class EditProfileFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.edit_profile_fragment, container, false)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        sharedPreferences = activity!!.getSharedPreferences(getString(R.string.alert_system_sharedPref), Context.MODE_PRIVATE)
+        sharedPreferences = activity!!.getSharedPreferences(
+            getString(R.string.alert_system_sharedPref),
+            Context.MODE_PRIVATE
+        )
 
         db = Firebase.database.reference
 
@@ -81,13 +85,16 @@ class EditProfileFragment : Fragment() {
         }
 
         val username = sharedPreferences.getString("username", "Mr. Anonymous")
-        val userId = sharedPreferences.getInt("uid",-1)
+        val userId = sharedPreferences.getInt("uid", -1)
         val mobileText = etProfileMobile.text.toString()
         val ageText = etProfileAge.text.toString()
         val genderText = etProfileGender.text.toString()
 
+        hideKeyboard(activity as Activity)
+
         btnSave.setOnClickListener {
-            val user = User(username.toString(),
+            val user = User(
+                username.toString(),
                 mobileText.toInt(),
                 ageText.toInt(),
                 genderText,
@@ -108,7 +115,7 @@ class EditProfileFragment : Fragment() {
                     //On Failure
                 }
 
-            activity?.supportFragmentManager?.popBackStack()
+            activity?.supportFragmentManager?.popBackStackImmediate()
         }
 
         return view
@@ -126,6 +133,18 @@ class EditProfileFragment : Fragment() {
             addressText = getString(R.string.txt_current_location, address, city, state)
             txtAutoAddress.text = addressText
         })
+    }
+
+    fun hideKeyboard(activity: Activity) {
+        val imm: InputMethodManager =
+            activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        //Find the currently focused view, so we can grab the correct window token from it.
+        var view = activity.currentFocus
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = View(activity)
+        }
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     override fun onRequestPermissionsResult(

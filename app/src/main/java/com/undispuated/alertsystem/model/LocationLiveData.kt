@@ -1,4 +1,4 @@
-package com.undispuated.alertsystem.util
+package com.undispuated.alertsystem.model
 
 import android.annotation.SuppressLint
 import android.content.Context

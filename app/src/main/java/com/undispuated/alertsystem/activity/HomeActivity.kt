@@ -204,6 +204,7 @@ class HomeActivity : AppCompatActivity() {
         sharedPreferences.edit().putBoolean("isLoggedIn",true).apply()
         sharedPreferences.edit().putString("username",mUsername).apply()
         sharedPreferences.edit().putString("id",uid).apply()
+        sharedPreferences.edit().putInt("contacts_count", 0).apply()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

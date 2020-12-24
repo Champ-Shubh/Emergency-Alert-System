@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgGenderPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/icon_female"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/txtNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toRightOf="@id/imgGenderPic"
+            tools:text="Mom"
+            android:text="@string/str_nickname"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNickname"
+            android:layout_toRightOf="@id/imgGenderPic"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            tools:text="Babita Srivastava"
+            android:text="@string/str_name"/>
+
+        <TextView
+            android:id="@+id/txtPhoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toRightOf="@id/imgGenderPic"
+            android:layout_marginTop="6dp"
+            tools:text="+91-8601369151"
+            android:textColor="@android:color/black"
+            android:text="@string/str_phone_number"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
