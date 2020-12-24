@@ -83,8 +83,35 @@ class HomeFragment : Fragment() {
             )?.commit()
 
             sendSMS("Medical")
+        }
+        // TODO: Add actual phone numbers while sending SMS, but first test the current code
+        // TODO: Add fragments and code for other emergency types too
 
-            // TODO: Add Pending Intents and Broadcast Receivers to monitor the SMS sending process and add actual phone numbers
+        rlAccident.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.replace(
+                R.id.frameLayout,
+                AccidentFragment()
+            )?.commit()
+
+            sendSMS("Accidental")
+        }
+
+        rlTheft.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.replace(
+                R.id.frameLayout,
+                TheftFragment()
+            )?.commit()
+
+            sendSMS("Theft")
+        }
+
+        rlTerrorism.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.replace(
+                R.id.frameLayout,
+                TerrorismFragment()
+            )?.commit()
+
+            sendSMS("Terror")
         }
 
         return view

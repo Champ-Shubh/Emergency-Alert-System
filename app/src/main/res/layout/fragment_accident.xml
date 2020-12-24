@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:context=".fragment.AccidentFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:orientation="vertical"
-        tools:context=".fragment.MedicalFragment">
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@drawable/background_3">
-
-            <TextView
-                android:id="@+id/txtYouRequestedHelp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="@string/you_ve_requested_for"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/txtMedEmergency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtYouRequestedHelp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="@string/medical_emergency"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imgRequestedMedical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtMedEmergency"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/icon_medical"
-                tools:ignore="ContentDescription" />
-
-        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/background_1">
 
         <TextView
-            android:id="@+id/hold_on"
+            android:id="@+id/txtAccidentRequestedHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/you_ve_requested_for"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtAccidentEmergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAccidentRequestedHelp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/accidental_emergency"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgRequestedAccident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAccidentEmergency"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_corner"
+            android:src="@drawable/icon_accident"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -77,7 +76,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/detected_location"
+            android:id="@+id/detected_loc_accident"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
@@ -89,7 +88,7 @@
             android:paddingStart="4dp"/>
 
         <Button
-            android:id="@+id/btnCancelAlert"
+            android:id="@+id/btnCancelAccident"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="12dp"
@@ -100,11 +99,11 @@
             android:text="@string/btn_cancel_alert" />
 
         <Button
-            android:id="@+id/btnOutOfEmergency"
+            android:id="@+id/btnOutOfEmergAccident"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="18dp"
             android:elevation="4dp"
@@ -115,4 +114,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
 </ScrollView>

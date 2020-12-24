@@ -101,8 +101,6 @@ class MedicalFragment : Fragment() {
             //Issue notification to all that emergency is over now
         }
 
-        //TODO: Search about how to send SMS alerts and implement it, for that first add a feature for adding family contacts
-
         return view
     }
 

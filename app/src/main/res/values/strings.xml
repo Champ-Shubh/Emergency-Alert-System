@@ -58,4 +58,7 @@
     <string name="female">Female</string>
     <string name="choose_gender">Select Gender :</string>
     <string name="add_contact">Add Contact</string>
+    <string name="accidental_emergency">Accidental Emergency</string>
+    <string name="theft_emergency">Theft Emergency</string>
+    <string name="terror_emergency">Terrorism Emergency</string>
 </resources>

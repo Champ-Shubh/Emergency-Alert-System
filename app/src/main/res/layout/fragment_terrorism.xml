@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:context=".fragment.TerrorismFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:orientation="vertical"
-        tools:context=".fragment.MedicalFragment">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@drawable/background_3">
+            android:background="@drawable/background_1">
 
             <TextView
-                android:id="@+id/txtYouRequestedHelp"
+                android:id="@+id/txtTerrorRequestedHelp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -28,32 +26,33 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/txtMedEmergency"
+                android:id="@+id/txtTerrorEmergency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtYouRequestedHelp"
+                android:layout_below="@id/txtTerrorRequestedHelp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:text="@string/medical_emergency"
+                android:text="@string/terror_emergency"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imgRequestedMedical"
+                android:id="@+id/imgRequestedTerror"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtMedEmergency"
+                android:layout_below="@id/txtTerrorEmergency"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/icon_medical"
+                android:padding="8dp"
+                android:background="@drawable/rounded_corner"
+                android:src="@drawable/icon_rifle"
                 tools:ignore="ContentDescription" />
 
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/hold_on"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -77,7 +76,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/detected_location"
+            android:id="@+id/detected_loc_terror"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
@@ -89,7 +88,7 @@
             android:paddingStart="4dp"/>
 
         <Button
-            android:id="@+id/btnCancelAlert"
+            android:id="@+id/btnCancelTerror"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="12dp"
@@ -100,11 +99,11 @@
             android:text="@string/btn_cancel_alert" />
 
         <Button
-            android:id="@+id/btnOutOfEmergency"
+            android:id="@+id/btnOutOfEmergTerror"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="18dp"
             android:elevation="4dp"
@@ -115,4 +114,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
 </ScrollView>
